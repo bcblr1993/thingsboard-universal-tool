@@ -1,0 +1,27 @@
+appId: com.bcblr1993.thingsboard-universal-tool
+productName: ThingsBoard Universal Tool
+directories:
+  output: dist
+  buildResources: build
+files:
+  - dist
+  - dist-electron
+  - package.json
+win:
+  target: nsis
+  icon: resources/icon.ico
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  deleteAppDataOnUninstall: true
+mac:
+  target: dmg
+  icon: resources/icon.icns
+  hardenedRuntime: true
+  gatekeeperAssess: false
+linux:
+  target:
+    - AppImage
+    - deb
+  icon: resources/icon.png
+  category: Utility

@@ -9,17 +9,17 @@
 
 基于 Electron + React + TypeScript 构建，融合了深色赛博工业美学（Cyber-Industrial Aesthetics），旨在为现场交付与运维提供一个可视化、高效、沉浸式的管理环境。
 
-![仪表盘概览](docs/images/dashboard.png)
+![登录界面](docs/images/login.png)
 
 ---
 
 ## 🌟 核心特性 (Core Features)
 
-### 1. 赛博工业美学 UI
+### 1. 仪表盘概览
 
-深度定制的 "Glassmorphism" 玻璃拟态风格，内置多套主题（赛博朋克、暗黑、明亮、工业灰、黑客帝国），支持一键切换。
+告别繁杂，核心数据尽收眼底。
 
-![系统设置](docs/images/settings.png)
+![仪表盘](docs/images/dashboard.png)
 
 ### 2. 多环境与租户管理
 
@@ -29,20 +29,28 @@
 
 ![租户列表](docs/images/tenant_list.png)
 
-### 3. 可视化资产拓扑
-
-- **React Flow 集成**: 以树状图形式直观展示 `租户 -> 资产 -> 设备` 的层级关系。
-- **拖拽编排**: 支持交互式操作，清晰梳理复杂的物联网资产脉络。
-
-![资产拓扑](docs/images/topology.png)
-
-### 4. 高级设备管理
+### 3. 高级设备管理
 
 - **高密度列表**: 专为海量设备设计的紧凑型列表视图。
 - **实时状态**: 直观展示设备的活跃/离线状态。
 - **凭证管理**: 智能解析 MQTT Basic、Access Token 等多种凭证格式，支持一键复制。
 
-### 5. 国际化支持
+![设备列表](docs/images/device_list.png)
+
+### 4. 赛博工业美学 UI
+
+深度定制的 "Glassmorphism" 玻璃拟态风格，内置多套主题（赛博朋克、暗黑、明亮、工业灰、黑客帝国），支持一键切换。
+
+![系统设置](docs/images/settings.png)
+
+### 5. 可视化资产拓扑 (开发中)
+
+- **React Flow 集成**: 以树状图形式直观展示 `租户 -> 资产 -> 设备` 的层级关系。
+- **拖拽编排**: 支持交互式操作，清晰梳理复杂的物联网资产脉络。
+
+*(拓扑功能持续迭代中，暂无最新截图)*
+
+### 6. 国际化支持
 
 原生支持 **简体中文 (zh-CN)** 与 **English (en-US)**，界面文案自适应切换。
 

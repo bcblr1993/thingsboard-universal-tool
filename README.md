@@ -1,96 +1,111 @@
-# ThingsBoard Universal Tool
+# ThingsBoard 通用工具 (ThingsBoard Universal Tool)
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Version](https://img.shields.io/badge/version-1.0.0-green.svg)
 ![Electron](https://img.shields.io/badge/Electron-28.0.0-blueviolet.svg)
 ![React](https://img.shields.io/badge/React-18-blue)
 
-A high-performance, cross-platform desktop management tool designed for **ThingsBoard** engineers. Built with Electron, React, and TypeScript, it delivers a specialized **Cyber-Industrial** experience for managing tenants, assets, and devices with high efficiency.
+**专为 ThingsBoard 工程师打造的高性能、跨平台通用交付工具。**
 
-> **中文说明**: 这是一个专为 ThingsBoard 打造的高端通用交付工具，提供可视化的多环境管理、资产拓扑编排和高密度的设备监控界面。
+基于 Electron + React + TypeScript 构建，融合了深色赛博工业美学（Cyber-Industrial Aesthetics），旨在为现场交付与运维提供一个可视化、高效、沉浸式的管理环境。
+
+![仪表盘概览](docs/images/dashboard.png)
 
 ---
 
-## 🌟 Key Features
+## 🌟 核心特性 (Core Features)
 
-- **Cross-Platform**: Runs perfectly on macOS, Windows, and Linux.
-- **Multi-Environment Management**: Seamlessly switch between Dev, Test, and Prod instances.
-- **Cyber-Industrial Aesthetics**: Custom "Glassmorphism" UI with multiple themes (Cyberpunk, Dark, Light, Industrial).
-- **High-Density Data Views**: Optimized list views for Tenants and Devices to manage large-scale deployments.
-- **Visual Topology**: Interactive node-based graph editor for Assets and relations using React Flow.
-- **Smart Auth**: Token management, auto-refresh, and "Magic Jump" to instantly impersonate tenants on the web dashboard.
-- **Telemetry Analysis**: Real-time throughput calculation and visualization.
+### 1. 赛博工业美学 UI
 
-## 🛠 Tech Stack
+深度定制的 "Glassmorphism" 玻璃拟态风格，内置多套主题（赛博朋克、暗黑、明亮、工业灰、黑客帝国），支持一键切换。
 
-- **Core**: Electron 28, Vite 5
-- **Frontend**: React 18, TypeScript
-- **State Management**: Zustand, React Query
-- **Styling**: Tailwind CSS, Radix UI, Framer Motion
-- **Visualization**: React Flow, Recharts
+![系统设置](docs/images/settings.png)
 
-## 🚀 Getting Started
+### 2. 多环境与租户管理
 
-### Prerequisites
+- **多实例切换**: 轻松管理开发、测试、生产等多个 ThingsBoard 环境。
+- **租户列表**: 高密度的租户管理视图，支持快速搜索与状态监控。
+- **Magic Jump**: 独家的“免密跳转”功能，系统管理员可一键以任意租户身份进入 Web Dashboard，无需重新登录。
+
+![租户列表](docs/images/tenant_list.png)
+
+### 3. 可视化资产拓扑
+
+- **React Flow 集成**: 以树状图形式直观展示 `租户 -> 资产 -> 设备` 的层级关系。
+- **拖拽编排**: 支持交互式操作，清晰梳理复杂的物联网资产脉络。
+
+![资产拓扑](docs/images/topology.png)
+
+### 4. 高级设备管理
+
+- **高密度列表**: 专为海量设备设计的紧凑型列表视图。
+- **实时状态**: 直观展示设备的活跃/离线状态。
+- **凭证管理**: 智能解析 MQTT Basic、Access Token 等多种凭证格式，支持一键复制。
+
+### 5. 国际化支持
+
+原生支持 **简体中文 (zh-CN)** 与 **English (en-US)**，界面文案自适应切换。
+
+## 🛠 技术栈 (Tech Stack)
+
+- **核心框架**: Electron 28, Vite 5
+- **前端技术**: React 18, TypeScript
+- **状态管理**: Zustand, React Query
+- **界面样式**: Tailwind CSS, Radix UI, Framer Motion
+- **可视化**: React Flow, Recharts
+
+## 🚀 快速开始 (Getting Started)
+
+### 前置要求
 
 - Node.js >= 18.0.0
-- npm or yarn
+- npm 或 yarn
 
-### Installation
+### 安装步骤
 
-1. **Clone the repository**
+1. **克隆仓库**
 
    ```bash
-   git clone https://github.com/chenxu/thingsboard-universal-tool.git
+   git clone https://github.com/bcblr1993/thingsboard-universal-tool.git
    cd thingsboard-universal-tool
    ```
 
-2. **Install dependencies**
+2. **安装依赖**
 
    ```bash
    npm install
    ```
 
-3. **Run in Development Mode**
+3. **启动开发环境**
 
    ```bash
    npm run dev
    ```
 
-   This will start the Vite dev server and launch the Electron application window.
+   此命令将同时启动 Vite 开发服务器和 Electron 主窗口。
 
-4. **Build for Production**
+4. **构建发布包**
 
    ```bash
    npm run build
    ```
 
-   The distributed binaries (DMG, Exe, etc.) will be generated in the `dist` folder.
+   构建产物（如 .dmg, .exe）将输出到 `dist` 目录。
 
-## 🎨 Themes & Customization
+## 🤝 贡献指南 (Contributing)
 
-The tool comes with built-in themes that can be switched instantly in the Settings page:
+非常欢迎提交 Pull Request 或 Issue！
 
-- **Cyberpunk** (Default)
-- **Dark / Light**
-- **Industrial**
-- **Forest**
-- **Matrix**
+1. Fork 本项目
+2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交改动 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 提交 Pull Request
 
-## 🤝 Contributing
+## 📄 开源协议 (License)
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+本项目基于 [MIT License](LICENSE) 开源。
 
 ---
 
-**Author**: Chen Yannan
+**作者**: Chen Yannan

@@ -21,7 +21,7 @@ export const tenantService = {
         });
     },
 
-    getTenantUserToken: async (tenantId: string): Promise<string> => {
+    getTenantUserToken: async (_tenantId: string): Promise<string> => {
         // This is a "SysAdmin" feature: masquerade as tenant admin or get their login token.
         // In standard TB API, SysAdmin cannot directly "get token" for a tenant without login.
         // However, a common pattern for "Magic Jump" is:

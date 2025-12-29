@@ -3,6 +3,7 @@ productName: ThingsBoard Universal Tool
 directories:
   output: dist
   buildResources: build
+artifactName: "ThingsBoardUniversalTool-${version}.${ext}"
 files:
   - dist
   - dist-electron
